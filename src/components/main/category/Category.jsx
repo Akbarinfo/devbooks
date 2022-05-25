@@ -55,13 +55,10 @@ export default function Category(props) {
       if(e.target.id === 'barchasi'){
         return item
       }
-
       return item.genre === e.target.id
     }))
-
   }
 
-  // console.log(cate)
   return(
     <ul className="category d-flex">
       {category.map((item, key) => (

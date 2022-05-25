@@ -60,42 +60,7 @@ export default function Users() {
                           )
                         })
                       }
-
-                      <li className="writers__work-item">
-                        <div className="writers__work-imgbox">
-                          <img className="writers__work-img" src={imgs} alt="" />
-                        </div>
-                        <h3 className="writers__work-name">Dunyo ishlari</h3>
-                        <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 4.1 • 3400 ta fikrlar</p>
-                      </li>
-                      <li className="writers__work-item">
-                        <div className="writers__work-imgbox">
-                          <img className="writers__work-img" src={imgs} alt="" />
-                        </div>
-                        <h3 className="writers__work-name">Dunyo ishlari</h3>
-                        <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 4.1 • 3400 ta fikrlar</p>
-                      </li>
-                      <li className="writers__work-item">
-                        <div className="writers__work-imgbox">
-                          <img className="writers__work-img" src={imgs} alt="" />
-                        </div>
-                        <h3 className="writers__work-name">Dunyo ishlari</h3>
-                        <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 4.1 • 3400 ta fikrlar</p>
-                      </li>
-                      <li className="writers__work-item">
-                        <div className="writers__work-imgbox">
-                          <img className="writers__work-img" src={imgs} alt="" />
-                        </div>
-                        <h3 className="writers__work-name">Dunyo ishlari</h3>
-                        <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 4.1 • 3400 ta fikrlar</p>
-                      </li>
-                      <li className="writers__work-item">
-                        <div className="writers__work-imgbox">
-                          <img className="writers__work-img" src={imgs} alt="" />
-                        </div>
-                        <h3 className="writers__work-name">Dunyo ishlari</h3>
-                        <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 4.1 • 3400 ta fikrlar</p>
-                      </li>
+                      
                     </ul>
                   </div>
                 </div>
