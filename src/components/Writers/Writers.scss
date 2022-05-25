@@ -125,12 +125,27 @@
     width: 165px;
   }
 
+  &__work-link {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
   &__work-imgbox {
     width: 164px;
     height: 246px;
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 17px;
+  }
+
+  &__work-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__work-name {

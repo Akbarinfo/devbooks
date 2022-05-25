@@ -4,23 +4,29 @@ import '../main/category/Category.scss'
 
 let category = [
   {
-    id: "temuriylar",
-    name: "Temuriylar davri",
-    class: false
-  },
-  {
-    id: "jadid",
-    name: "Jadid adabiyoti",
+    id: "barchasi",
+    name: "Barchasi",
     class: true
   },
+
   {
-    id: "sovet",
-    name: "Sovet davri",
+    id: "biznes",
+    name: "Biznes",
     class: false
   },
   {
-    id: "mustaqillik",
-    name: "Mustaqillik davri",
+    id: "uzbek",
+    name: "O'zbek adabiyoti",
+    class: false
+  },
+  {
+    id: "Diniy",
+    name: "Diniy",
+    class: false
+  },
+  {
+    id: "jahon",
+    name: "Jahon",
     class: false
   },
 ]
@@ -46,17 +52,17 @@ export default function CateBooks(props) {
     setCate(cates)
 
     props.setNewObj(props.obj.filter(item => {
-      return item.category === e.target.id
-      console.log("ishladi")
+      if(e.target.id === 'barchasi'){
+        return item
+      }
+      return item.genre === e.target.id
     }))
-
   }
 
-  // console.log(cate)
   return(
     <ul className="category d-flex">
       {category.map((item, key) => (
-        <li key={key+97} className="category__item">
+        <li key={key+99} className="category__item">
           <button onClick={btnClick} id={item.id} className={`category__btn ${item.class ? 'category__activ': ''}`}>{item.name}</button>
         </li>
       ))}

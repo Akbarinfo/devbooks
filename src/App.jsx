@@ -18,14 +18,15 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}/>
-        {/* <Route path="/adiblar" element={<Adiblar />} /> */}
-        <Route path="/adiblar" element={<BooksInfo />} />
+        <Route path="/adiblar" element={<Adiblar />} />
         <Route path="/maqolalar" element={<Maqolalar />} />
         <Route path="/forum" element={<Forum />} />
         <Route path="Users/:id" element= {<Users/>}/>
         <Route path="/signin" element= {<SignIn />}/>
         <Route path="/signup" element= {<SignUp />}/>
         <Route path="/kitoblar" element= {<Books />}/>
+        <Route path="Books/:id" element={<BooksInfo />} />
+
       </Routes>
     </>
   );

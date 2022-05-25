@@ -5326,11 +5326,11 @@ const books = [
               bookPrice : "18 000 so'm",
               audioTime : "1:45 soat",
               electron : "pdf, epub"
-
+A
           },
       ]
   },
 ]
 
-
+A
 export {books}

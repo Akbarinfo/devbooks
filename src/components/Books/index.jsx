@@ -26,7 +26,11 @@ export default function Books() {
             setNewObj={setNewObj}
           />
           <h2 className="main__title">Asosiy kategoriyalar</h2>
-          <Category newObj={newObj}/>
+          <Category
+            obj={obj}
+            newObj={newObj}
+            setNewObj={setNewObj}
+          />
           <CardBooks newObj={newObj}/>
         </section>
       </div>

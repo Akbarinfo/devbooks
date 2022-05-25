@@ -9,11 +9,11 @@ export default function CardBooks(props) {
   return(
     <ul className="cardBook cards d-flex">
       {
-        props.newObj.map((item, key) => {
+        props.newObj.map((item, keys) => {
           return(
             item.bookObj.map((book, key) => {
               return(
-                <Link className="cards__link" key={key+65} to={`Users/${book.bookId}`}>
+                <Link className="cards__link" key={key+65} to={`/Books/${book.bookId}`}>
                   <li className="cardBook__item">
                     <div className="cardBook__imgbox">
                       <img className="cardBook__img" src={book.bookImg} alt={book.name} />
@@ -24,7 +24,7 @@ export default function CardBooks(props) {
                       <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> {book.bookRating} • 3400 ta fikrlar</p>
                     </div>
                   </li>
-            </Link>
+                </Link>
               )
             }))
         })
