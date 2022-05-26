@@ -124,6 +124,7 @@
   &__canvas-list {
     list-style-type: none;
     padding-top: 30px;
+    overflow-y: auto;
   }
 
   &__canvas-item {

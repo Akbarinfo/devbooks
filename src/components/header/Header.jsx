@@ -45,9 +45,8 @@ export default function Header({setWishlist, wishlist}) {
 
   let deleteHandler = (e) => {
     let idd = e.target.id
-    console.log(e.target.id)
-    setWishlist(wishlist.filter(item => item.bookId !== idd))
 
+    setWishlist(wishlist.filter(item => item.bookId !== idd))
   }
 
   return(
