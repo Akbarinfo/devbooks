@@ -61,22 +61,3 @@ export default function Users({name, lastName, phone, mail, wishlist}) {
   </section>
   )
 }
-
-{/* <li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li> */}
-
-<Link className="writers__work-link" to="">
-<li className="writers__work-item">
-  <div className="writers__work-imgbox">
-    <img className="writers__work-img" src="" alt="" />
-  </div>
-  <h3 className="writers__work-name">Kitoblar</h3>
-  <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-</li>
-</Link>
