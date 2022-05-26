@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 //scss
 import './BookInfo.scss'
@@ -6,8 +6,19 @@ import imgb from "../../assets/images/object/otkirhoshimov.jpg"
 import dataobj from '../../Books/Books'
 
 
-export default function BooksInfo() {
+export default function BooksInfo({setWishlist, wishlist}) {
   let location = useLocation();
+
+  let [istrue, setIstrue] = useState(true)
+
+  let bookadd = (el) => {
+    if(istrue) {
+      setWishlist([...wishlist, el])
+      setIstrue(false)
+    }
+  }
+
+  console.log(wishlist)
 
   return(
     <section className="bookinfo">
@@ -67,7 +78,7 @@ export default function BooksInfo() {
                       </li>
 
                       <li>
-                        <button className="bookinfo__btn">Javonga qo’shish</button>
+                        <button onClick={() => bookadd(book)} className="bookinfo__btn">Javonga qo’shish</button>
                       </li>
                     </ul>
                   </div>

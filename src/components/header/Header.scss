@@ -54,7 +54,6 @@
     border-bottom: 2px solid #fff;
   }
 
-
   &__btn {
     width: 50px;
     height: 50px;
@@ -105,6 +104,8 @@
   }
 
   &__modal-link {
+    background: none;
+    border: none;
     font-size: 18px;
     text-decoration: none;
     color: #18130e;
@@ -119,6 +120,64 @@
     font-size: 20px;
     color: #18130e;
   }
+
+  &__canvas-list {
+    list-style-type: none;
+    padding-top: 30px;
+  }
+
+  &__canvas-item {
+    position: relative;
+    border-bottom: 1px solid #18130e56;
+    padding: 15px;
+    margin: 0 10px;
+    margin-bottom: 10px;
+
+  }
+
+  &__canvas-imgbox {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  &__canvas-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__canvas-name,
+  &__canvas-link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #18130e;
+    margin-bottom: 5px;
+  }
+
+  &__canvas-comment {
+    font-size: 16px;
+    color: #18130e;
+    margin-bottom: 5px;
+  }
+
+  &__canvas-btn {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background-color: #4d4128;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    transition: all 0.4s linear;
+
+    &:hover {
+      background-color: #302b20;
+    }
+  }
 }
 
 @keyframes Modal {
@@ -129,6 +188,7 @@
   to{
     opacity: 1;
   }
+
 }
 
 .block {

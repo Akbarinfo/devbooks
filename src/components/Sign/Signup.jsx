@@ -4,36 +4,17 @@ import { Link } from "react-router-dom";
 import './Sign.scss'
 // images
 import signup from '../../assets/images/signup.svg'
-import databaza from "../Users/databaza";
 
-console.log(databaza)
+export default function SignUp({setName, setLastName, setPhone,setMail, setPass}) {
 
-export default function SignUp() {
-  let [user, setUser] = useState([])
-
-  let formHandler = (e) => {
-    e.preventDefault()
-    let names = e.target[0].value
-    let lnames = e.target[1].value
-    let phonee = e.target[2].value
-    let maile = e.target[3].value
-    let passe = e.target[4].value
-
-    setUser({
-      name: names,
-      lname: lnames,
-      phone: phonee,
-      mail: maile,
-      pass: passe
-    })
-    databaza.push({
-      name: names,
-      lname: lnames,
-      phone: phonee,
-      mail: maile,
-      pass: passe
-    })
-  }
+  // let formHandler = (e) => {
+  //   e.preventDefault()
+  //   let names = e.target[0].value
+  //   let lnames = e.target[1].value
+  //   let phonee = e.target[2].value
+  //   let maile = e.target[3].value
+  //   let passe = e.target[4].value
+  // }
 
   let [inname, setInName] = useState(true)
   let [inlastname, setInLastName] = useState(true)
@@ -45,7 +26,7 @@ export default function SignUp() {
   //focus
   let nHandler = (e) => {
     let name = e.target.value;
-
+      setName(name)
      if(name === "" || name.match(/[0-9]/) || name.match(/[!@#&%*$^]/) || name.includes("  ") || name.length < 2){
        setInName(false);
 
@@ -57,6 +38,7 @@ export default function SignUp() {
 
    let lnHandler = (e) => {
     let lastName = e.target.value;
+    setLastName(lastName)
 
      if(lastName === "" || lastName.match(/[0-9]/) || lastName.match(/[!@#&%*$^]/) || lastName.includes("  ") || lastName.length < 2){
        setInLastName(false);
@@ -67,33 +49,36 @@ export default function SignUp() {
      }
    }
 
-   let phHandler = (e) => {
-     let phone = e.target.value;
+  let phHandler = (e) => {
+    let phone = e.target.value;
+    setPhone(phone)
 
-     if(phone.length === "" || phone.length < 9 || Number.isInteger(phone)){
-       setInPhone(false);
+    if(phone.length === "" || phone.length < 9 || Number.isInteger(phone)){
+      setInPhone(false);
      }else{
-       setInPhone(true);
-       setCount(count + 1)
+      setInPhone(true);
+      setCount(count + 1)
+    }
+  }
 
-     }
-   }
+  let mHandler = (e) => {
+    let mail = e.target.value;
+    setMail(mail)
 
-   let mHandler = (e) => {
-    let email = e.target.value;
-
-     if(! email.includes('@') && ! email.includes('.')){
-       setInMail(false)
-     }
-     else{
-       setInMail(true)
-       setCount(count + 1)
-     }
-   }
+    if(! mail.includes('@') && ! mail.includes('.')){
+      setInMail(false)
+    }
+    else{
+      setInMail(true)
+      setCount(count + 1)
+      }
+  }
 
    let paHandler = (e) => {
-     let key = e.target.value
-     if(key.match(/[A-Z]/) === null || key.match(/[0-9]/) === null) {
+     let pass = e.target.value
+      setPass(pass)
+
+     if(pass.match(/[A-Z]/) === null || pass.match(/[0-9]/) === null) {
        setInPassword(false)
      }
      else {
@@ -152,6 +137,7 @@ export default function SignUp() {
     }
     else {
       setInPassword(true)
+      setCount(count + 1)
     }
   }
 
@@ -167,7 +153,7 @@ export default function SignUp() {
             <div className="sign__box">
               <h2 className="sign__title">Sign Up</h2>
               <p className="sign__desc">Already have an account? <Link className="sign__link" to="/signin">Sign in</Link> </p>
-              <form action="/profile" onSubmit={formHandler}>
+              <form>
                 <label className="sign__label" htmlFor="fristname">
                   <input id="fristname" onBlur={nHandler} onChange={nameHandler} className={inname ? "sign__input" : "sign__input sign__error"} type="text" placeholder="First Name"/>
                 </label>
@@ -183,8 +169,9 @@ export default function SignUp() {
                 <label className="sign__label" htmlFor="uppass">
                   <input id="uppass" onBlur={paHandler} onChange={passHandler} className={inpassword ? "sign__input" : "sign__input sign__error"} type="text" placeholder="Password"/>
                 </label>
-
-                <button type="submit" className="sign__btn" disabled={count >= 5 ? false : true}>Next step</button>
+                <Link to="/profile">
+                  <button type="submit" className="sign__btn" disabled={count >= 5 ? false : true}>Next step</button>
+                </Link>
               </form>
             </div>
           </div>

@@ -15,7 +15,7 @@ export default function Writers() {
       <div className="container">
         {
           obj.map((item, key) => {
-            if(item.id === location.pathname.split("/").at(-1)) {
+            if(+item.id === +location.pathname.split("/").at(-1)) {
               return(
                 <div key={key+98} className="writers__main d-flex justify-content-between">
                   <div className="writers__leftbox">
@@ -59,7 +59,6 @@ export default function Writers() {
                                 <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> {book.bookRating} • 3400 ta fikrlar</p>
                               </li>
                             </Link>
-
                           )
                         })
                       }

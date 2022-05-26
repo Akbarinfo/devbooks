@@ -1,9 +1,9 @@
 import React from "react";
-import databaza from "./databaza";
+import { Link } from "react-router-dom";
 //scss
 import "./Users.scss";
 
-export default function Users() {
+export default function Users({name, lastName, phone, mail, wishlist}) {
   return(
     <section className="profile">
     <div className="container">
@@ -11,7 +11,7 @@ export default function Users() {
         <div className="">
           <div className="profile__leftbox">
           <div className="profile__avabox">
-            <img className="profile__avatar" src="https://imgur.com/gUyLSOZ.jpg" alt="" />
+            <img className="profile__avatar" src="https://imgur.com/SilJTRT.jpg" alt="" />
           </div>
             <span className="profile__star justify-content-center align-items-center"><i className='bx bxs-star'></i></span>
           </div>
@@ -19,17 +19,10 @@ export default function Users() {
           <p className="profile__read">186 ta kitob o'qigan</p>
         </div>
         <div className="rightbox">
-          {
-            databaza.map(item => {
-              return(
-                <h2 className="profile__name">{item.name} {item.lname}</h2>
-
-              )
-            })
-          }
-          <p className="profile__info">Tavallud: <span className="profile__infospan">February 08, 1999</span></p>
-          <p className="profile__info">Manzili: <span className="profile__infospan">Jizzax</span></p>
-          <p className="profile__info">Bio: <span className="profile__infospan">Graphic designer and Developer</span></p>
+          <h2 className="profile__name">{name} {lastName}</h2>
+          <p className="profile__info">Mail: <span className="profile__infospan">{mail}</span></p>
+          <p className="profile__info">Tel: <span className="profile__infospan">{phone}</span></p>
+          <p className="profile__info">Bio: <span className="profile__infospan">Frontend Developer</span></p>
         </div>
       </div>
 
@@ -37,7 +30,7 @@ export default function Users() {
         <div className="profile__ad d-flex justify-content-center align-items-center">
           <p className="profile__adtext">Bu yerda Sizning reklamangiz bo'lishi mumkin!!!</p>
         </div>
-        <div className="">
+        <div className="profile__rbox">
           <div className="profile__box d-flex justify-content-between align-items-center">
             <p className="profile__title profile__activ">Saqlanganlar</p>
             <p className="profile__title">O'qilganlar</p>
@@ -46,78 +39,21 @@ export default function Users() {
           </div>
 
           <ul className="writers__work-list d-flex flex-wrap">
-              <li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li>
-              <li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li><li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li><li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li><li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li><li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li><li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li><li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li><li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li><li className="writers__work-item">
-                <div className="writers__work-imgbox">
-                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
-                </div>
-                <h3 className="cardBook__title">QOrqmna</h3>
-                      <p className="cardBook__name">Toshmatboy</p>
-                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
-              </li>
+            {
+              wishlist.map((book, k) => {
+                return(
+                  <Link key={k+56} className="writers__work-link" to="">
+                    <li className="writers__work-item">
+                      <div className="writers__work-imgbox">
+                        <img className="writers__work-img" src={book.bookImg} alt="" />
+                      </div>
+                      <h3 className="writers__work-name">{book.bookName}</h3>
+                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> {book.bookRating} • 3400 ta fikrlar</p>
+                    </li>
+                  </Link>
+                )
+              })
+            }
           </ul>
         </div>
       </div>
@@ -126,7 +62,16 @@ export default function Users() {
   )
 }
 
-{/* <Link className="writers__work-link" to="">
+{/* <li className="writers__work-item">
+                <div className="writers__work-imgbox">
+                  <img className="writers__work-img" src="https://picsum.photos/id/24/200/" alt="" />
+                </div>
+                <h3 className="cardBook__title">QOrqmna</h3>
+                      <p className="cardBook__name">Toshmatboy</p>
+                      <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
+              </li> */}
+
+<Link className="writers__work-link" to="">
 <li className="writers__work-item">
   <div className="writers__work-imgbox">
     <img className="writers__work-img" src="" alt="" />
@@ -134,4 +79,4 @@ export default function Users() {
   <h3 className="writers__work-name">Kitoblar</h3>
   <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> 5.5 • 3400 ta fikrlar</p>
 </li>
-</Link> */}
+</Link>
