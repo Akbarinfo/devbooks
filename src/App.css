@@ -19,6 +19,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 @font-face {
   font-family: 'Visuelt Pro';
   src: url('../src/assets/fonts/VisueltPro/VisueltPro-Regular.woff2') format('woff2'),
@@ -56,7 +59,7 @@ ul {
 
 body {
   background-color: #191919;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   min-height: 100vh;
   display: flex;
@@ -69,4 +72,8 @@ main {
 
 html {
   scroll-behavior: smooth;
+}
+
+.page-link {
+  background: none;
 }

@@ -7,7 +7,7 @@ import obj from "../../Books/Books"
 
 import imgs from '../../assets/images/object/qodiriy.jpg'
 
-export default function Users() {
+export default function Writers() {
   let location = useLocation();
 
   return(

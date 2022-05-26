@@ -1,0 +1,258 @@
+<script>
+  let header = document.querySelector(".table-header");
+let body = document.querySelector(".table-body");
+let htds = header.querySelectorAll("th");
+let btds = body.querySelectorAll("tbody tr:first-child td");
+
+function fixHeaderWidths() {
+  header.style.width = `${body.offsetWidth}px`;
+  Array.prototype.forEach.call(htds, (td, index) => {
+    td.style.width = `${btds[index].offsetWidth}px`;
+  });
+  body.style.top = "";
+  let top = (header.getBoundingClientRect()).bottom - (btds[0].getBoundingClientRect()).top;
+  body.style.top = `${top}px`;
+}
+
+fixHeaderWidths();
+
+window.onresize = fixHeaderWidths;
+
+
+
+</script>
+
+<style>
+  .table-header {
+  background: white;
+  position: fixed;
+  table-layout: fixed;
+  z-index: 1;
+}
+
+.table-body {
+  position: relative;
+}
+
+.table-body thead {
+  visibility: hidden;
+}
+
+.tableDiv {
+  position: relative;
+  margin-top: 40px
+}
+
+tr {
+  position: relative;
+}
+
+tr {
+  position: relative;
+}
+
+</style>
+<!-- language: lang-css -->
+
+
+
+<!-- language: lang-html -->
+
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet" />
+<div class="col-md-12 tableDiv">
+  <table class="table-header table table-stripedcf table-bordered">
+    <thead>
+      <tr>
+        <th>Column1</th>
+        <th>Column2</th>
+        <th>Column3</th>
+        <th>Column4</th>
+        <th>Column5</th>
+        <th>Column6</th>
+      </tr>
+    </thead>
+  </table>
+  <table class="table-body table table-stripedcf table-bordered">
+    <thead>
+      <tr>
+        <th>Column1</th>
+        <th>Column2</th>
+        <th>Column3</th>
+        <th>Column4</th>
+        <th>Column5</th>
+        <th>Column6</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>FIRST</td>
+        <td>asda sdfasf</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>aasasvdksKbfDJSJDBBKLJDFKLbj</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asasvdksKbfDJSJDBBKLJDFKLbjdSdfa</td>
+        <td>fsdf</td>
+        <td>sdfsfd</td>
+        <td>sdfs</td>
+        <td>fsdfsdf</td>
+      </tr>
+      <tr>
+        <td>asdf</td>
+        <td>asdfa</td>

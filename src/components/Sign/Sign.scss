@@ -110,9 +110,12 @@
     }
   }
 
-  &__ {
-
+  &__error {
+    border-color: red;
   }
 
+  &__success {
+    border-color: green;
+  }
 
 }
